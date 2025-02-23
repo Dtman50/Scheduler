@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="543.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.softwareii_dt.controller.ReportsController">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="55.0" prefHeight="487.0" prefWidth="1030.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Total Appointments By Type/Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1030.0">
+                     <children>
+                        <TableView fx:id="reports_totalCustomersView" layoutX="190.0" layoutY="66.0" prefHeight="342.0" prefWidth="651.0">
+                          <columns>
+                            <TableColumn fx:id="totalCustomer_monthCol" prefWidth="181.0" text="Month" />
+                            <TableColumn fx:id="totalCustomer_typeCol" prefWidth="247.0" text="Type of Appointment" />
+                              <TableColumn fx:id="totalCustomer_totalCol" prefWidth="222.0" text="Total Appointments" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="979.0" layoutY="416.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
+                        <Label layoutX="285.0" layoutY="26.0" text="Total Number of Customer Appointments By Type and Month">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="All Appointments By Contact">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="504.0" prefWidth="850.0">
+                     <children>
+                        <TableView fx:id="reports_totalContactsView" layoutX="53.0" layoutY="71.0" prefHeight="342.0" prefWidth="925.0">
+                          <columns>
+                            <TableColumn fx:id="totalContact_contactCol" prefWidth="89.0" text="Contact" />
+                            <TableColumn fx:id="totalContact_AppointmentIDCol" minWidth="6.0" prefWidth="99.0" text="Appointment ID" />
+                              <TableColumn fx:id="totalContact_titleCol" prefWidth="110.0" text="Title" />
+                              <TableColumn fx:id="totalContact_typeCol" prefWidth="136.0" text="Type" />
+                              <TableColumn fx:id="totalContact_descCol" prefWidth="113.0" text="Description" />
+                              <TableColumn fx:id="totalContact_startCol" prefWidth="153.0" text="Start" />
+                              <TableColumn fx:id="totalContact_endCol" prefWidth="146.0" text="End" />
+                              <TableColumn fx:id="totalContact_customerIDCol" prefWidth="78.0" text="Customer ID" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="978.0" layoutY="416.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
+                        <Label layoutX="415.0" layoutY="26.0" text="Schedule for Each Contact">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="All Appointments By User">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="reports_totalUserView" layoutX="53.0" layoutY="67.0" prefHeight="342.0" prefWidth="925.0">
+                           <columns>
+                              <TableColumn fx:id="totalUser_userCol" prefWidth="84.0" text="User" />
+                              <TableColumn fx:id="totalUser_appointmentIDCol" minWidth="6.0" prefWidth="101.0" text="Appointment ID" />
+                              <TableColumn fx:id="totalUser_titleCol" prefWidth="123.0" text="Title" />
+                              <TableColumn fx:id="totalUser_typeCol" prefWidth="141.0" text="Type" />
+                              <TableColumn fx:id="totalUser_descCol" prefWidth="110.0" text="Description" />
+                              <TableColumn fx:id="totalUser_startCol" prefWidth="150.0" text="Start" />
+                              <TableColumn fx:id="totalUser_endCol" prefWidth="141.0" text="End" />
+                              <TableColumn fx:id="totalUser_customerIDCol" prefWidth="74.0" text="Customer ID" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="427.0" layoutY="25.0" text="Schedule for Each User">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="979.0" layoutY="416.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="474.0" layoutY="10.0" text="Reports">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#toRecords" text="View Customer Records" />
+      <Button layoutX="926.0" layoutY="11.0" mnemonicParsing="false" onAction="#toScheduler" text="To Scheduler" />
+   </children>
+</AnchorPane>
